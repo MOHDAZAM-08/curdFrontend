@@ -1,0 +1,124 @@
+/* Base styles for all screen sizes */
+.HomePage {
+  height: 96vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homecontent {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  width: 900px;
+  border-radius: 2%;
+  padding: 20px;
+  height: 500px;
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+.button-5 {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #fa6400;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.button-5:hover,
+.button-5:focus {
+  background-color: #fb8332;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.button-5:hover {
+  transform: translateY(-1px);
+}
+
+.button-5:active {
+  background-color: #c85000;
+  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+/* Media Queries */
+
+/* For medium devices (landscape tablets, smaller desktops) */
+@media (max-width: 1024px) {
+  .homecontent {
+      width: 80%;
+      height: 450px;
+  }
+
+  .button-5 {
+      font-size: 14px;
+      padding: calc(.75rem - 1px) calc(1.25rem - 1px);
+  }
+}
+
+/* For small devices (portrait tablets and large phones) */
+@media (max-width: 768px) {
+  .HomePage {
+      flex-direction: column;
+      height: auto;
+      padding: 20px;
+  }
+
+  .homecontent {
+      width: 90%;
+      height: auto;
+  }
+
+  .button-5 {
+      font-size: 14px;
+      width: 100%;
+      padding: calc(.75rem - 1px) calc(1.25rem - 1px);
+  }
+}
+
+/* For extra small devices (phones) */
+@media (max-width: 576px) {
+  .homecontent {
+      width: 95%;
+      padding: 15px;
+  }
+
+  .button-5 {
+      font-size: 13px;
+      padding: calc(.75rem - 1px) calc(1.25rem - 1px);
+  }
+}
+
+/* For very small devices (small phones) */
+@media (max-width: 400px) {
+  .homecontent {
+      width: 100%;
+      padding: 10px;
+  }
+
+  .button-5 {
+      font-size: 12px;
+      padding: calc(.5rem - 1px) calc(1rem - 1px);
+      min-height: 2.5rem;
+  }
+}
