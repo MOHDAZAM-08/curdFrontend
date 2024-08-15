@@ -25,7 +25,7 @@ const CreateUser = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
   
-    fetch('/CreateUser', {
+    fetch('https://curdbackend-bdi1.onrender.com/CreateUser', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

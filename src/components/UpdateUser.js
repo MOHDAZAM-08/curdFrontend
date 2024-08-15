@@ -28,7 +28,7 @@ const UpdateUser = () => {
 
 
   useEffect(() => {
-    fetch('/getUser/'+id)
+    fetch('https://curdbackend-bdi1.onrender.com/getUser/'+id)
       .then(response => response.json())
       .then(data => {
         setFormData(data);
@@ -43,7 +43,7 @@ const UpdateUser = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
   
-    fetch(`/updateUser/${id}`, {
+    fetch(`https://curdbackend-bdi1.onrender.com/updateUser/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'

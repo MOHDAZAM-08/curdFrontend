@@ -9,7 +9,7 @@ function Table() {
     const [userdata, setUserdata] = useState([]);
 
     useEffect(() => {
-        fetch('/get')
+        fetch('https://curdbackend-bdi1.onrender.com/get')
             .then(response => response.json())
             .then(data => {
                 setUserdata(data);
@@ -37,7 +37,7 @@ function Table() {
                 text: "Your file has been deleted.",
                 icon: "success"
               });
-              fetch(`/deleteUser/${id}`, {
+              fetch(`https://curdbackend-bdi1.onrender.com/deleteUser/${id}`, {
                 method: 'DELETE'
               })
                 .then(response => response.json())
